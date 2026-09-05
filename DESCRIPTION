@@ -17,7 +17,8 @@ BugReports: https://github.com/SamLovick/ROI.plugin.coinclp/issues
 Encoding: UTF-8
 Depends: R (>= 4.0)
 Imports: coinclp (>= 0.1.0), methods, ROI (>= 1.0-0), slam, stats
-Suggests: Matrix
+Suggests: Matrix, ROI.plugin.highs
+Remotes: SamLovick/coinclp
 NeedsCompilation: no
 Roxygen: list(markdown = FALSE)
 Config/roxygen2/version: 8.1.0

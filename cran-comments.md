@@ -18,3 +18,6 @@
   registered with ROI as "coinclp".
 * It imports coinclp, which interfaces the COIN-OR Clp library. This
   submission therefore has to follow coinclp onto CRAN, not precede it.
+* Until then DESCRIPTION carries "Remotes: SamLovick/coinclp" so that
+  continuous integration can resolve that dependency from its repository.
+  That field is to be removed for the CRAN submission itself.

@@ -88,8 +88,9 @@ ressparse <- ROI_solve(opsparse, solver = "coinclp")
 stopifnot(solution(ressparse, "status_code") == 0L)
 
 ## The same problem through another solver, if one is installed, must agree.
-if ("highs" %in% ROI_installed_solvers()) {
-    suppressMessages(require("ROI.plugin.highs", quietly = TRUE))
+## Loading the namespace is enough: an ROI plugin registers itself in
+## .onLoad, so it does not have to be attached.
+if (requireNamespace("ROI.plugin.highs", quietly = TRUE)) {
     other <- ROI_solve(opsparse, solver = "highs")
     stopifnot(near(solution(ressparse, "objval"), solution(other, "objval"), 1e-6))
     other_mix <- ROI_solve(op, solver = "highs")
