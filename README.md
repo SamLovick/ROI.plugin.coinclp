@@ -49,7 +49,8 @@ solution(res, "msg")     # the full coinclp result, including iterations
 ```
 
 Constraints held as a `simple_triplet_matrix`, which is how ROI stores them,
-go to Clp in sparse form — nothing is densified on the way.
+go to Clp as sparse: only the non-zero entries are passed, and the matrix is
+never expanded into a full grid of mostly zeros on the way.
 
 ## Controls
 

@@ -9,7 +9,8 @@
 #' The plugin accepts a linear objective, linear constraints, continuous
 #' variables and variable bounds, minimising or maximising.  Constraints
 #' given as a \code{simple_triplet_matrix}, which is how \pkg{ROI} stores
-#' them, are passed to Clp in sparse form without being densified.
+#' them, are passed to Clp as sparse: only the non-zero entries travel, and
+#' the matrix is never expanded into a full grid of mostly zeros.
 #'
 #' @section Solver controls:
 #' Pass these to \code{\link[ROI]{ROI_solve}} as named arguments or in

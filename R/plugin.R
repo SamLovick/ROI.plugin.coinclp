@@ -14,8 +14,8 @@ objective_vector <- function(x, ncols) {
 }
 
 ## Constraints reach the plugin as an L_constraint, whose L is a simple
-## triplet matrix; coinclp takes that representation directly, so nothing is
-## densified on the way to the solver.
+## triplet matrix; coinclp takes that representation directly, so only the
+## non-zero entries travel and the matrix is never expanded to dense.
 constraint_parts <- function(x) {
     con <- ROI::constraints(x)
     if (is.null(con) || length(con) == 0L)
