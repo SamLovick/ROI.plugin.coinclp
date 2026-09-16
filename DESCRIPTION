@@ -7,8 +7,8 @@ Authors@R: c(
            role = c("aut", "cre")))
 Description: Registers the 'COIN-OR' 'Clp' linear programming solver, through
     the 'coinclp' package, with the 'R' Optimization Infrastructure ('ROI').
-    Linear programs with continuous variables are then solved by
-    ROI_solve(op, solver = "coinclp"), keeping sparse constraint matrices
+    Linear programs with continuous variables are then solved with
+    'ROI_solve()' and solver 'coinclp', keeping sparse constraint matrices
     sparse all the way to the solver, and returning dual values, reduced
     costs and row activities alongside the primal solution.
 License: EPL
