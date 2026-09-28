@@ -1,3 +1,10 @@
+# ROI.plugin.coinclp 0.1.0.9000 (development version)
+
+* Title and Description follow CRAN's rule that package, software and API
+  names are written in single quotes, and only those: every quoted name is
+  now a bare one, with no quoted function call, no acronym in parentheses
+  and no double quotes. Requested by CRAN when 0.1.0 was accepted.
+
 # ROI.plugin.coinclp 0.1.0
 
 * First release, reviving ROI.plugin.clp on top of the coinclp package after
