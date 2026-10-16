@@ -1,3 +1,33 @@
+## ROI.plugin.coinclp 0.1.1
+
+A licence change and the wording CRAN asked for. No change to the code.
+
+### Licence
+
+The package was released as "License: EPL", which in an R DESCRIPTION means
+EPL 1.0, the only Eclipse entry in R's licence database. The Free Software
+Foundation and the Eclipse Foundation both record EPL 1.0 as incompatible
+with the GPL, and this package imports ROI (GPL-3) and slam (GPL-2). The EPL
+was inherited from the archived ROI.plugin.clp, which this package replaces;
+the point was raised against that package in 2018 and never answered there.
+
+Nothing in this package is COIN-OR code. It is R code over ROI, slam and
+coinclp, so GPL-3 is the licence that fits, and it is what ROI itself,
+ROI.plugin.glpk and ROI.plugin.lpsolve use. I am the sole author and
+copyright holder, so the change is mine to make.
+
+The minimum coinclp rises to 0.1.2 for the same reason: that is the release
+in which coinclp became MIT, and importing an earlier EPL 1.0 version from a
+GPL-3 package would reproduce the incompatibility this release removes.
+coinclp 0.1.2 is on CRAN.
+
+### Wording
+
+Title and Description now write package, software and API names in single
+quotes, and only those, as requested when 0.1.0 was accepted. Every quoted
+name is a bare one: no quoted function call, no acronym in parentheses, no
+double quotes.
+
 ## Test environments
 
 * Windows 11, R 4.5.2
@@ -6,28 +36,14 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
+0 errors | 0 warnings | 0 notes
 
-* This is a new submission.
+## Reverse dependencies
 
-## Resubmission
+None.
 
-The first submission (2026-09-15) failed the Windows incoming pretest with
+## Note on the repository
 
-    Package required but not available: 'coinclp'
-
-because it was made the same day coinclp was published and its Windows binary
-had not yet been built. That binary is now on CRAN and coinclp passes CRAN's
-Windows checks, so the dependency resolves. The pretest also flagged two
-"possibly misspelled" words in DESCRIPTION, ROI and coinclp, arising from a
-function call written without quotes; the sentence now uses quoted names.
-
-## Notes for the reviewer
-
-* This package revives ROI.plugin.clp, archived from CRAN on 2022-01-08
-  because the clpAPI package it imported had been archived. It is new code
-  under a new name rather than a takeover of that package; the solver is
-  registered with ROI as "coinclp".
-* It imports coinclp, on CRAN since 2026-09-15.
-* DESCRIPTION in the repository carries "Remotes: SamLovick/coinclp" for
-  continuous integration; that field is stripped from the submitted tarball.
+DESCRIPTION in the repository carries "Remotes: SamLovick/coinclp" so that
+continuous integration can resolve that dependency from source; the field is
+stripped from the submitted tarball.
