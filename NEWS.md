@@ -1,5 +1,14 @@
-# ROI.plugin.coinclp 0.1.0.9000 (development version)
+# ROI.plugin.coinclp 0.1.1
 
+* The licence changes from EPL to GPL-3. `License: EPL` in an R package
+  means EPL 1.0, which the Free Software Foundation and the Eclipse
+  Foundation both record as incompatible with the GPL, and this package
+  imports `ROI` (GPL-3) and `slam` (GPL-2). The EPL came from the archived
+  ROI.plugin.clp, which this package replaces; nothing here is COIN-OR code,
+  so there was never a reason to carry it. GPL-3 matches `ROI` itself and
+  the other ROI plugins. Raised by David M. German against the archived
+  package in 2018 (datastorm-open/ROI.plugin.clp#1), where it went
+  unanswered.
 * Title and Description follow CRAN's rule that package, software and API
   names are written in single quotes, and only those: every quoted name is
   now a bare one, with no quoted function call, no acronym in parentheses

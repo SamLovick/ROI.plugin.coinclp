@@ -1,7 +1,7 @@
 Package: ROI.plugin.coinclp
 Type: Package
 Title: 'COIN-OR' 'Clp' Plugin for the 'R' Optimization Infrastructure
-Version: 0.1.0.9000
+Version: 0.1.1
 Authors@R: c(
     person("Sam", "Lovick", email = "sam@lovickconsulting.com",
            role = c("aut", "cre")))
@@ -11,7 +11,7 @@ Description: Registers the 'COIN-OR' 'Clp' linear programming solver with
     'ROI' with the 'coinclp' solver, keeping sparse constraint matrices
     sparse all the way to the solver, and returning dual values, reduced
     costs and row activities alongside the primal solution.
-License: EPL
+License: GPL-3
 URL: https://github.com/SamLovick/ROI.plugin.coinclp
 BugReports: https://github.com/SamLovick/ROI.plugin.coinclp/issues
 Encoding: UTF-8
